@@ -14,7 +14,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitted(true);
-    toast({ title: "Booking request sent!", description: "We'll get back to you within 24 hours." });
+    toast({ title: "Booking request sent!", description: "We'll get back to you shortly." });
   };
 
   return (
@@ -23,7 +23,7 @@ const Contact = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-heading font-extrabold mb-4">Book Your Driving Lesson</h1>
           <p className="text-primary-foreground/70 text-lg max-w-2xl mx-auto">
-            Fill out the form below or call us directly. We'll match you with the perfect instructor.
+            Call Richard directly on <strong>0414 771 101</strong> or email us below.
           </p>
         </div>
       </section>
@@ -39,7 +39,7 @@ const Contact = () => {
                   <div className="text-center py-12">
                     <CheckCircle2 className="w-16 h-16 text-success mx-auto mb-4" />
                     <h3 className="font-heading font-bold text-foreground text-xl mb-2">Thank You!</h3>
-                    <p className="text-muted-foreground">We've received your booking request and will be in touch within 24 hours.</p>
+                    <p className="text-muted-foreground">We've received your booking request and will be in touch shortly.</p>
                     <Button variant="outline" className="mt-6" onClick={() => setSubmitted(false)}>
                       Submit Another Request
                     </Button>
@@ -53,7 +53,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-1.5">Phone Number *</label>
-                        <Input required type="tel" placeholder="0400 000 000" maxLength={20} />
+                        <Input required type="tel" placeholder="04XX XXX XXX" maxLength={20} />
                       </div>
                     </div>
                     <div>
@@ -73,12 +73,13 @@ const Contact = () => {
                             <SelectItem value="overseas">Overseas Licence</SelectItem>
                             <SelectItem value="refresher">Refresher Lesson</SelectItem>
                             <SelectItem value="intensive">Intensive Course</SelectItem>
+                            <SelectItem value="interlock">Interlock Driving</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-1.5">Suburb / Pickup Location</label>
-                        <Input placeholder="e.g. Brunswick" maxLength={100} />
+                        <Input placeholder="e.g. Caulfield" maxLength={100} />
                       </div>
                     </div>
                     <div>
@@ -102,14 +103,14 @@ const Contact = () => {
                     <Phone className="w-5 h-5 text-primary mt-0.5" />
                     <div>
                       <p className="font-semibold text-foreground">Phone</p>
-                      <a href="tel:0400000000" className="text-muted-foreground hover:text-primary">0400 000 000</a>
+                      <a href="tel:0414771101" className="text-muted-foreground hover:text-primary">0414 771 101</a>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Mail className="w-5 h-5 text-primary mt-0.5" />
                     <div>
                       <p className="font-semibold text-foreground">Email</p>
-                      <a href="mailto:info@melbournedrivingschool.com.au" className="text-muted-foreground hover:text-primary text-sm">info@melbournedrivingschool.com.au</a>
+                      <a href="mailto:richard@melbournedrivingschool.com.au" className="text-muted-foreground hover:text-primary text-sm">richard@melbournedrivingschool.com.au</a>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -123,7 +124,7 @@ const Contact = () => {
                     <Clock className="w-5 h-5 text-primary mt-0.5" />
                     <div>
                       <p className="font-semibold text-foreground">Hours</p>
-                      <p className="text-muted-foreground text-sm">7 days a week, 7am – 7pm</p>
+                      <p className="text-muted-foreground text-sm">7 days a week</p>
                     </div>
                   </li>
                 </ul>
@@ -132,10 +133,10 @@ const Contact = () => {
               <div className="bg-primary rounded-xl p-6 text-primary-foreground">
                 <h3 className="font-heading font-bold text-lg mb-2">Prefer to Call?</h3>
                 <p className="text-primary-foreground/70 text-sm mb-4">
-                  Speak directly with our team to book your lesson or ask any questions.
+                  It is usually best to discuss your needs personally over the phone with Richard.
                 </p>
                 <Button asChild variant="hero" className="w-full">
-                  <a href="tel:0400000000"><Phone className="w-4 h-4 mr-2" /> Call 0400 000 000</a>
+                  <a href="tel:0414771101"><Phone className="w-4 h-4 mr-2" /> Call 0414 771 101</a>
                 </Button>
               </div>
 
