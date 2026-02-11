@@ -5,9 +5,12 @@ import { Menu, X, Phone } from "lucide-react";
 
 const navLinks = [
   { label: "Home", to: "/" },
+  { label: "About", to: "/about" },
   { label: "Services", to: "/services" },
+  { label: "Licence Assessment", to: "/licence-assessment" },
   { label: "Pricing", to: "/pricing" },
   { label: "Areas", to: "/areas" },
+  { label: "Testimonials", to: "/testimonials" },
   { label: "FAQ", to: "/faq" },
   { label: "Contact", to: "/contact" },
 ];
@@ -47,9 +50,9 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:0400000000" className="flex items-center gap-2 text-sm font-semibold text-primary">
+          <a href="tel:0414771101" className="flex items-center gap-2 text-sm font-semibold text-primary">
             <Phone className="w-4 h-4" />
-            0400 000 000
+            0414 771 101
           </a>
           <Button asChild variant="cta" size="lg">
             <Link to="/contact">Book a Lesson</Link>
@@ -85,9 +88,9 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="flex flex-col gap-2 mt-3 pt-3 border-t">
-              <a href="tel:0400000000" className="flex items-center gap-2 text-sm font-semibold text-primary px-4">
+              <a href="tel:0414771101" className="flex items-center gap-2 text-sm font-semibold text-primary px-4">
                 <Phone className="w-4 h-4" />
-                0400 000 000
+                0414 771 101
               </a>
               <Button asChild variant="cta" className="mx-4">
                 <Link to="/contact" onClick={() => setOpen(false)}>Book a Lesson</Link>

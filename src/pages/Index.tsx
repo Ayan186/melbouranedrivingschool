@@ -18,20 +18,20 @@ const services = [
 const stats = [
   { value: "15+", label: "Years Experience" },
   { value: "5000+", label: "Students Passed" },
-  { value: "95%", label: "First-Time Pass Rate" },
-  { value: "50+", label: "Suburbs Covered" },
+  { value: "96-98%", label: "Pass Rate" },
+  { value: "All Suburbs", label: "Melbourne Wide" },
 ];
 
 const testimonials = [
-  { name: "Sarah M.", text: "I was so nervous about driving, but the instructor was incredibly patient. Passed my test on the first go!", rating: 5 },
-  { name: "James L.", text: "Best driving school in Melbourne! The VicRoads test prep was exactly what I needed. Highly recommend.", rating: 5 },
-  { name: "Priya K.", text: "As an overseas licence holder, I needed help adapting. They made the whole process smooth and stress-free.", rating: 5 },
+  { name: "Audrey, 45, Camberwell", text: "Richard has been wonderfully patient and friendly. I would highly recommend Richard to anyone thinking of taking driving lessons.", rating: 5 },
+  { name: "Christine, 24, Caulfield", text: "I passed my drive test the first time, and I feel confident with being on the road, even driving through the busy city area.", rating: 5 },
+  { name: "Thomas, 18, Brighton", text: "Within a very short time I passed my driving test easily with a near perfect score of 98%. A big thank you to Richard from Melbourne Driving School.", rating: 5 },
 ];
 
 const suburbs = [
-  "CBD", "South Yarra", "Carlton", "Footscray", "Brunswick",
-  "St Kilda", "Richmond", "Hawthorn", "Box Hill", "Glen Waverley",
-  "Dandenong", "Werribee",
+  "CBD", "South Yarra", "Carlton", "Caulfield", "Brighton",
+  "St Kilda", "Richmond", "Camberwell", "Clayton", "Oakleigh",
+  "Dandenong", "Werribee", "Bundoora", "Broadmeadows", "Frankston",
 ];
 
 const Index = () => (
@@ -45,26 +45,26 @@ const Index = () => (
       <div className="relative container mx-auto px-4 py-20 md:py-32 lg:py-40">
         <div className="max-w-2xl">
           <span className="inline-block bg-secondary/20 text-secondary border border-secondary/30 rounded-full px-4 py-1 text-sm font-semibold mb-6 animate-fade-in">
-            ⭐ Melbourne's Most Trusted Driving School
+            ⭐ Patience &amp; Professionalism
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up">
             Professional Driving Lessons in Melbourne
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Pass with confidence. Learn from experienced instructors with a 95% first-time pass rate. Automatic &amp; manual lessons available across 50+ Melbourne suburbs.
+            Melbourne's leading driving school with a 96-98% pass rate. Government accredited instructors. Automatic &amp; manual lessons across all Melbourne suburbs. Call <strong>0414 771 101</strong>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             <Button asChild variant="hero" size="lg" className="text-base px-8 py-6">
               <Link to="/contact">Book a Lesson <ArrowRight className="w-5 h-5 ml-1" /></Link>
             </Button>
             <Button asChild variant="hero-outline" size="lg" className="text-base px-8 py-6">
-              <a href="tel:0400000000"><Phone className="w-5 h-5 mr-1" /> Call Now</a>
+              <a href="tel:0414771101"><Phone className="w-5 h-5 mr-1" /> Call 0414 771 101</a>
             </Button>
           </div>
           <div className="flex flex-wrap gap-4 mt-8 text-primary-foreground/70 text-sm animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-secondary" /> Free Pick-up & Drop-off</span>
-            <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-secondary" /> Patient Instructors</span>
-            <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-secondary" /> VicRoads Approved</span>
+            <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-secondary" /> Free Pick-up &amp; Drop-off</span>
+            <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-secondary" /> Male &amp; Female Instructors</span>
+            <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-secondary" /> Government Accredited</span>
           </div>
         </div>
       </div>
@@ -88,7 +88,7 @@ const Index = () => (
     <section className="section-padding bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">Our Driving Lessons & Services</h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">Our Driving Lessons &amp; Services</h2>
           <p className="text-muted-foreground text-lg">Whether you're a complete beginner or need a refresher, we have the right lesson for you.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -123,10 +123,10 @@ const Index = () => (
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
-            { step: "1", title: "Book Your Lesson", desc: "Choose your preferred time and lesson type online or by phone." },
-            { step: "2", title: "We Pick You Up", desc: "Your instructor comes to your home, school, or work — anywhere in Melbourne." },
-            { step: "3", title: "Learn & Practice", desc: "Build your skills with professional, patient one-on-one instruction." },
-            { step: "4", title: "Pass Your Test", desc: "Feel confident and prepared to ace your VicRoads driving test." },
+            { step: "1", title: "Book Your Lesson", desc: "Choose your preferred time and lesson type online or call 0414 771 101." },
+            { step: "2", title: "We Pick You Up", desc: "Your instructor comes to your home, school, uni, or work — anywhere in Melbourne." },
+            { step: "3", title: "Learn & Practice", desc: "Build your skills with professional, patient one-on-one instruction using our Competency Based Training system." },
+            { step: "4", title: "Pass Your Test", desc: "Feel confident and prepared to ace your VicRoads driving test with our 96-98% pass rate." },
           ].map((item, i) => (
             <div key={i} className="text-center">
               <div className="w-14 h-14 rounded-full bg-secondary text-secondary-foreground flex items-center justify-center font-heading font-extrabold text-xl mx-auto mb-4">
@@ -150,10 +150,10 @@ const Index = () => (
             </h2>
             <div className="space-y-5">
               {[
-                { icon: Award, title: "15+ Years of Experience", desc: "Thousands of students successfully trained across Melbourne." },
-                { icon: ShieldCheck, title: "95% First-Time Pass Rate", desc: "Our proven methods help you pass your driving test the first time." },
-                { icon: Users, title: "Patient, Professional Instructors", desc: "Calm, supportive teaching style perfect for nervous and new drivers." },
-                { icon: MapPin, title: "Free Pick-up & Drop-off", desc: "We come to you — home, school, or work across 50+ suburbs." },
+                { icon: Award, title: "Government Accredited Instructors", desc: "Highly qualified, government accredited and strictly character reference checked." },
+                { icon: ShieldCheck, title: "96-98% First-Time Pass Rate", desc: "Compared to the state-wide average of only 45-55%. Our proven methods work." },
+                { icon: Users, title: "Patient, Professional Instructors", desc: "Male and female instructors available. Calm, supportive teaching for all learners." },
+                { icon: MapPin, title: "Free Pick-up & Drop-off", desc: "We come to you — home, school, uni, or work across all Melbourne suburbs." },
               ].map((item, i) => (
                 <div key={i} className="flex gap-4">
                   <div className="w-10 h-10 rounded-lg bg-secondary/20 flex items-center justify-center shrink-0">
@@ -173,13 +173,13 @@ const Index = () => (
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-primary rounded-xl p-6 text-primary-foreground">
               <Star className="w-8 h-8 text-secondary mb-3" />
-              <div className="text-2xl font-heading font-bold">4.9/5</div>
-              <div className="text-sm text-primary-foreground/70">Average Rating</div>
+              <div className="text-2xl font-heading font-bold">5 Stars</div>
+              <div className="text-sm text-primary-foreground/70">Google Reviews</div>
             </div>
             <div className="bg-muted rounded-xl p-6">
               <GraduationCap className="w-8 h-8 text-primary mb-3" />
-              <div className="text-2xl font-heading font-bold text-foreground">5000+</div>
-              <div className="text-sm text-muted-foreground">Students Passed</div>
+              <div className="text-2xl font-heading font-bold text-foreground">96-98%</div>
+              <div className="text-sm text-muted-foreground">Pass Rate</div>
             </div>
             <div className="bg-muted rounded-xl p-6">
               <Clock className="w-8 h-8 text-primary mb-3" />
@@ -189,7 +189,7 @@ const Index = () => (
             <div className="bg-secondary rounded-xl p-6 text-secondary-foreground">
               <Car className="w-8 h-8 mb-3" />
               <div className="text-2xl font-heading font-bold">Auto & Manual</div>
-              <div className="text-sm text-secondary-foreground/80">Both Available</div>
+              <div className="text-sm text-secondary-foreground/80">Dual Pedal Cars</div>
             </div>
           </div>
         </div>
@@ -201,7 +201,7 @@ const Index = () => (
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">What Our Students Say</h2>
-          <p className="text-muted-foreground text-lg">Thousands of happy learners across Melbourne.</p>
+          <p className="text-muted-foreground text-lg">Real testimonials from our Melbourne students.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
@@ -216,6 +216,11 @@ const Index = () => (
             </div>
           ))}
         </div>
+        <div className="text-center mt-8">
+          <Button asChild variant="outline">
+            <Link to="/testimonials">Read All Testimonials <ArrowRight className="w-4 h-4 ml-1" /></Link>
+          </Button>
+        </div>
       </div>
     </section>
 
@@ -224,7 +229,7 @@ const Index = () => (
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">Service Areas Across Melbourne</h2>
-          <p className="text-muted-foreground text-lg">We cover 50+ suburbs across Melbourne and surrounding areas.</p>
+          <p className="text-muted-foreground text-lg">We cover all Melbourne suburbs including VicRoads test centres.</p>
         </div>
         <div className="flex flex-wrap gap-3 justify-center mb-8">
           {suburbs.map((s) => (
@@ -246,14 +251,14 @@ const Index = () => (
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Ready to Start Driving?</h2>
         <p className="text-primary-foreground/70 text-lg max-w-xl mx-auto mb-8">
-          Book your first lesson today and join thousands of successful Melbourne drivers.
+          Call Melbourne Driving School now on 0414 771 101 and save money on our package deals!
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button asChild variant="hero" size="lg" className="text-base px-8 py-6">
             <Link to="/contact">Book a Lesson <ArrowRight className="w-5 h-5 ml-1" /></Link>
           </Button>
           <Button asChild variant="hero-outline" size="lg" className="text-base px-8 py-6">
-            <a href="tel:0400000000"><Phone className="w-5 h-5 mr-1" /> 0400 000 000</a>
+            <a href="tel:0414771101"><Phone className="w-5 h-5 mr-1" /> 0414 771 101</a>
           </Button>
         </div>
       </div>
